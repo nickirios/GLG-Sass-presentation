@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <title>RWD</title>
     <link href="Content/Styles/reset.css" rel="stylesheet" type="text/css" />
-    <link href="Content/Styles/layout.css" rel="stylesheet" type="text/css" />
     <link href="Content/Styles/styles.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/layout.css" rel="stylesheet" type="text/css" />
+    <link href="Content/Styles/prism.css" rel="stylesheet" type="text/css" />
     <script src="Content/Scripts/Plugins/json2.js" type="text/javascript"></script>
     <script src="Content/Scripts/Plugins/jquery.1.7.2.js" type="text/javascript"></script>
     <script src="Content/Scripts/Plugins/underscore.js" type="text/javascript"></script>
@@ -21,6 +22,7 @@
     <script src="Content/Scripts/dollhause.gallery.metagallery.js" type="text/javascript"></script>
     <!-- END APPLICATION SPECIFIC SCRIPTS -->
     <script src="Content/Scripts/Code/dollhause.coder.js" type="text/javascript"></script>
+    <script src="Content/Scripts/Plugins/prism.js" type="text/javascript"></script>
 </head>
 <body>
 <script>
@@ -85,14 +87,18 @@
 			<column class="wrapper">
 				<div class="page center">
 					<h1>SASS</h1>
-                    <p>Syntactically Awesome Style Sheets<br><em>Nicki is a poop head.</em></p>
+                    <p>Syntactically Awesome Style Sheets<br><em>Josh is a poop head.</em></p>
 				</div>
 			</column>
             <column class="wrapper">
 				<div class="page left">
 					<h1>Intro/Summary</h1>
                     <ol>
-                        <li></li>
+                        <li>SASS vs. SCSS</li>
+                        <li>Syntax</li>
+                        <li>Helpers</li>
+                        <li>Creative Solutions</li>
+                        <li>Setup</li>
                     </ol>
 				</div>
 			</column>
@@ -101,8 +107,69 @@
     <section>
         <row>
             <column class="wrapper">
-				<div class="page center left">
-					<h1 class="no-underline">Section Title</h1> 
+                <div class="page left">
+                    <h1>SASS vs. SCSS</h1>
+
+                    <h2>Syntax differences</h2>
+                    <p>SCSS:</p>
+<pre><code>.parent-class {
+        .child-class {
+                color: #000;
+                font-size: 0.9em;
+        }
+}</code></pre>
+
+                    <p>SASS:</p>
+<pre><code>.parent-class
+        .child-class
+                color: #000;
+                font-size: 0.9em;</code></pre>
+                </div>
+            </column>
+            <column class="wrapper">
+                <div class="page left">
+                    <h1>Why GLG is using SCSS</h1>
+                    <ol>
+                        <li>Lower barrier to entry</li>
+                        <li>Integration with existing CSS is much easier</li>
+                        <li>More expressive
+                            <ul>
+                                <li>You can group and compress code however you like, instead of being forced to indent.</li>
+                            </ul>
+                        </li>
+                        <li>Encourages proper nesting of rules
+                            <ul>
+                                <li>"With great power comes great responsibility."</li>
+                                <li>Too easy to tab over to nest with SASS</li>
+                            </ul>
+                        </li>
+                        <li>Encourages more modular code with @extend
+                            <ul>
+                                <li><a href="http://en.wikipedia.org/wiki/Don't_repeat_yourself">DRY!</a></li>
+                            </ul>
+                        </li>
+                        <li>Allows us to write better inline documentation
+                            <ul>
+                                <li>Comment however you like.</li>
+                            </ul>
+                        </li>
+                        <li>Existing CSS tools often work with SCSS</li>
+                        <li>SCSS could become the next version of CSS
+                            <ul>
+                                <li>Syntax introduced in SCSS could become SCSS4.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <cite><b>Source:</b> <a href="http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better">http://thesassway.com/articles/sass-vs-scss-which-syntax-is-better</a></cite>
+                </div>
+            </column>
+        </row>
+    </section>
+    <section>
+        <row>
+            <column class="wrapper">
+				<div class="page center">
+					<h1 class="no-underline">Syntax</h1> 
 				</div>
 			</column>
             <column class="wrapper">
@@ -111,27 +178,6 @@
                     <p>content</p>
                 </div>
 			</column>
-            <column class="wrapper">
-                <div class="page left">
-                    <h1>Slide Title</h1>
-                    <p>content</p>
-                </div>
-            </column>
-        </row>
-    </section>
-    <section>
-        <row>
-            <column class="wrapper">
-                <div class="page center left">
-                    <h1 class="no-underline">Section Title</h1> 
-                </div>
-            </column>
-            <column class="wrapper">
-                <div class="page left">
-                    <h1>Slide Title</h1>
-                    <p>content</p>
-                </div>
-            </column>
             <column class="wrapper">
                 <div class="page left">
                     <h1>Slide Title</h1>

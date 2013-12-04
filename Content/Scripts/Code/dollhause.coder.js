@@ -15,7 +15,7 @@ $(function () {
     $('pre').each(function () {
         var pre = $(this);
         pre.attr('contenteditable', '').attr('spellcheck', 'false').wrap('<div class="pre-wrapper" />').wrap('<div class="pre-container" />');
-        pre.parent().append('<a class="log"><span>RUN</span></a>');
+        //pre.parent().append('<a class="log"><span>RUN</span></a>');
         var log = pre.parent().find('.log');
         log.click(function (e) {
             e.preventDefault();
