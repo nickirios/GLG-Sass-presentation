@@ -181,13 +181,61 @@
             <column class="wrapper">
 				<div class="page left">
 					<h1>Selector Scoping</h1>
+                    <p>CSS:</p>
+<pre><code>
+.parent { 
+    color: #ccc;
+}
+.parent .child { 
+    float: left;
+}
+</code></pre>
+                    <p>SCSS:</p>
+<pre><code>
+.parent {
+    color: #ccc;
+    .child { 
+        float: left;
+    }
+}
+</code></pre>
 
                     <h2>Referencing Parent Selectors: &amp;</h2>
+                    <p>SCSS:</p>
+<pre><code>
+.parent {
+    position: relative;
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+</code></pre>
+                    <p>CSS:</p>
+<pre><code>
+.parent {
+    position: relative;
+}
+.parent:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+</code></pre>
                 </div>
 			</column>
             <column class="wrapper">
                 <div class="page left">
                     <h1>Variables</h1>
+<pre><code>
+$border_color_thinLight: #ccc;
+$thinLightBorder: 1px solid $border_color_thinLight;
+
+.parent {
+    border-top: $thinLightBorder;
+}
+</code></pre>
                 </div>
             </column>
             <column class="wrapper">
@@ -223,6 +271,7 @@
             <column class="wrapper">
                 <div class="page left">
                     <h1>Placeholder Selectors: %foo</h1>
+                    <p>Example: http://blog.teamtreehouse.com/extending-placeholder-selectors-with-sass</p>
                 </div>
             </column>
             <column class="wrapper">
