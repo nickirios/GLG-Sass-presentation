@@ -1,2 +1,2 @@
-GLG-SASS-presentation
+GLG-Sass-presentation
 =====================
